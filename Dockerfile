@@ -3,6 +3,6 @@ RUN mkdir /usr/src/app
 COPY package.json /user/src/app
 RUN npm cache clean --force
 RUN npm install
-COPY . /user/src/app
+COPY . /usr/src/app
 EXPOSE 4200
 CMD ["npm","start"]
