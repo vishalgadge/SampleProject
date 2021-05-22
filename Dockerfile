@@ -4,7 +4,7 @@ WORKDIR /usr/src/app
 COPY package.json /usr/src/app
 RUN npm cache clean --force
 
-RUN npm ci
+RUN npm i
 
 # HERE I NEED TO RUN ESM COMPILATION
 
