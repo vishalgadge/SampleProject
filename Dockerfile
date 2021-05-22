@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 FROM node:14
 RUN mkdir /usr/src/app
 WORKDIR /usr/src/app
@@ -15,14 +14,14 @@ RUN ng build --prod
 
 FROM nginx:alpine
 WORKDIR /usr/share/nginx/html
-COPY --from=build /home/node/app/dist ./
+COPY --from=build /usr/src/app/dist ./
 
 #RUN npm install
 #COPY . /usr/src/app
 #EXPOSE 4200
 #CMD ["npm","start"]
 
-=======
+
 #FROM node as build
 #WORKDIR /app
 #COPY package.json ./
@@ -32,4 +31,3 @@ COPY --from=build /home/node/app/dist ./
 #EXPOSE 4200
 #RUN npm install -g @angular/cli@7.3.9
 #RUN ng serve
->>>>>>> 866814821ed049b29a097908a62d3611452d424d
