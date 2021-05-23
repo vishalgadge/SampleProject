@@ -19,7 +19,7 @@ COPY --from=builder /usr/src/app/dist/sampleApp/ /usr/share/nginx/html
 #FROM node:14
 #RUN mkdir /usr/src/app
 #WORKDIR /usr/src/app
-#COPY pckage.json /usr/src/app
+#COPY package.json /usr/src/app
 #RUN npm cache clean --force
 
 #RUN npm i
